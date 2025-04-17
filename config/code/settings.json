@@ -6,8 +6,5 @@
     "editor.minimap.enabled": false,
     "editor.tabSize": 8,
     "extensions.ignoreRecommendations": true,
-    "workbench.startupEditor": "none",
-    "[html,json,lua,nix]": {
-        "editor.tabSize": 4
-    }
+    "workbench.startupEditor": "none"
 }
