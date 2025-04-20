@@ -22,3 +22,15 @@ vim.cmd("autocmd FileType html,json,lua,nix setlocal tabstop=4 shiftwidth=4")
 vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<C-e>", "<nop>")
 vim.keymap.set("n", "Q", "<nop>")
+
+local function toggle_word_wrap()
+    if vim.opt.wrap:get() then
+        vim.opt.wrap = false
+        print("word wrap disabled")
+    else
+        vim.opt.wrap = true
+        print("word wrap enabled")
+    end
+end
+vim.api.nvim_create_user_command('WW', toggle_word_wrap, {})
+vim.cmd('cnoreabbrev ww WW')
